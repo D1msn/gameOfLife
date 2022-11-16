@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #root{
+        border: 2px solid #003fa2;
+        background:
+                linear-gradient(
+                        rgba(0, 63, 162, 0.1), transparent 1px
+                ),
+                linear-gradient(
+                        90deg,
+                        rgba(0, 63, 162, 0.1), transparent 1px
+                );
+        /*background-size: 10px 10px;*/
+    }
+    #root2{
+        border: 2px solid #003fa2;
+        background:
+                linear-gradient(
+                        rgba(0, 63, 162, 0.1), transparent 1px
+                ),
+                linear-gradient(
+                        90deg,
+                        rgba(0, 63, 162, 0.1), transparent 1px
+                );
+        /*background-size: 10px 10px;*/
+    }
+
+    .interface{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .button{
+        cursor: pointer;
+        border: none;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 25px;
+        border-radius: 5px;
+        background: rgba(0, 63, 162, 0.5);
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .generation{
+        text-align: center;
+        min-width: 250px;
+        font-size: 32px;
+        margin: 20px 0 10px 0;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <canvas id="root"></canvas>
+    <div class="interface">
+        <h3 class="generation">
+            Generation <span id="generationCounter">0</span>
+        </h3>
+        <div class="buttons">
+            <div>
+                <button class="button" id="start">Start</button>
+                <label >
+                    Save try on start
+                    <input type="checkbox" id="saveOnStartCheckBox">
+                </label>
+
+            </div>
+            <button class="button" id="clear">Clear</button>
+            <button class="button" id="restoreLastTry">Restore last try</button>
+            <button class="button" id="resetLastTry">Save last try</button>
+        </div>
+        <div>
+            <div>
+                <p>grid opacity:</p>
+                <input
+                        value="10"
+                        id="opacityRange"
+                        type="range"
+                >
+            </div>
+        </div>
+    </div>
+    <canvas id="root2"></canvas>
+</div>
+<script src="./modules/constants.js"></script>
+<script src="./modules/style.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
