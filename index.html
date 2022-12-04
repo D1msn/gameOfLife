@@ -5,44 +5,43 @@
     <title>Title</title>
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    #root{
+    #root {
         border: 2px solid #003fa2;
-        background:
-                linear-gradient(
-                        rgba(0, 63, 162, 0.1), transparent 1px
-                ),
-                linear-gradient(
-                        90deg,
-                        rgba(0, 63, 162, 0.1), transparent 1px
-                );
-        /*background-size: 10px 10px;*/
-    }
-    #root2{
-        border: 2px solid #003fa2;
-        background:
-                linear-gradient(
-                        rgba(0, 63, 162, 0.1), transparent 1px
-                ),
-                linear-gradient(
-                        90deg,
-                        rgba(0, 63, 162, 0.1), transparent 1px
-                );
+        background: linear-gradient(
+                rgba(0, 63, 162, 0.1), transparent 1px
+        ),
+        linear-gradient(
+                90deg,
+                rgba(0, 63, 162, 0.1), transparent 1px
+        );
         /*background-size: 10px 10px;*/
     }
 
-    .interface{
+    #root2 {
+        border: 2px solid #003fa2;
+        background: linear-gradient(
+                rgba(0, 63, 162, 0.1), transparent 1px
+        ),
+        linear-gradient(
+                90deg,
+                rgba(0, 63, 162, 0.1), transparent 1px
+        );
+        /*background-size: 10px 10px;*/
+    }
+
+    .interface {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .button{
+    .button {
         cursor: pointer;
         border: none;
         box-sizing: border-box;
@@ -57,20 +56,20 @@
         font-size: 14px;
     }
 
-    .buttons{
+    .buttons {
         display: flex;
         flex-direction: column;
         gap: 8px;
     }
 
-    .wrapper{
+    .wrapper {
         display: flex;
         justify-content: center;
         padding: 16px;
         gap: 16px;
     }
 
-    .generation{
+    .generation {
         text-align: center;
         min-width: 250px;
         font-size: 32px;
@@ -85,13 +84,15 @@
             Generation <span id="generationCounter">0</span>
         </h3>
         <div class="buttons">
-            <div>
-                <button class="button" id="start">Start</button>
-                <label >
-                    Save try on start
-                    <input type="checkbox" id="saveOnStartCheckBox">
-                </label>
-
+            <div style="display: flex">
+                <div style="margin-right: 8px">
+                    <button class="button" id="start">Start</button>
+                    <label>
+                        Save try on start
+                        <input type="checkbox" id="saveOnStartCheckBox">
+                    </label>
+                </div>
+                <button class="button" id="nextStep">Next step</button>
             </div>
             <button class="button" id="clear">Clear</button>
             <button class="button" id="restoreLastTry">Restore last try</button>

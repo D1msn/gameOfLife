@@ -6,6 +6,7 @@ const ctx2 = canvas2.getContext('2d')
 
 const counterSpan = document.getElementById('generationCounter')
 const startButton = document.getElementById('start')
+const nextStepButton = document.getElementById('nextStep')
 const clearButton = document.getElementById('clear')
 const restoreLastTryButton = document.getElementById('restoreLastTry')
 const resetLastTryButton = document.getElementById('resetLastTry')

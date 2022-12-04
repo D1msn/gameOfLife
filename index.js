@@ -173,7 +173,9 @@ startButton.addEventListener('click', () => {
         interval = setInterval(newGeneration, INTERVAL)
     }
 
+
 })
+nextStepButton.addEventListener('click', newGeneration)
 
 randomFillButton.addEventListener('click', () => {
     firstRender(randomFillInput.value)
