@@ -13,12 +13,16 @@ const clearPreviewCanvas = () => {
     ctx2.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 }
 
-function firstRender() {
+function firstRender(randomValue) {
     clearMainCanvas()
     for (let x = 0; x < WIDTH; x++) {
         firstGeneration[x] = []
         for (let y = 0; y < HEIGHT; y++) {
-            firstGeneration[x][y] = 0
+            if(randomValue){
+                firstGeneration[x][y] = (Math.random() * 100 < randomValue ? 1 : 0)
+            } else {
+                firstGeneration[x][y] = 0
+            }
         }
     }
 }
@@ -95,6 +99,7 @@ const resetGame = () => {
     clearInterval(interval)
     interval = false
     counterSpan.innerText = `0`
+    counter = 0
     clearMainCanvas()
 }
 
@@ -167,6 +172,12 @@ startButton.addEventListener('click', () => {
         startButton.innerText = 'Stop'
         interval = setInterval(newGeneration, INTERVAL)
     }
+
+})
+
+randomFillButton.addEventListener('click', () => {
+    firstRender(randomFillInput.value)
+    drawMainField()
 })
 
 

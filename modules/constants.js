@@ -10,6 +10,8 @@ const clearButton = document.getElementById('clear')
 const restoreLastTryButton = document.getElementById('restoreLastTry')
 const resetLastTryButton = document.getElementById('resetLastTry')
 const saveOnStartCheckBox = document.getElementById('saveOnStartCheckBox')
+const randomFillButton = document.getElementById('randomFillButton')
+const randomFillInput = document.getElementById('randomFillValue')
 
 const CANVAS_WIDTH = 600
 const CANVAS_HEIGHT = 400
